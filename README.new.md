@@ -3,7 +3,7 @@
 #### THE FOLLOWING ARE MY GOALS FOR THIS COHORT:
 - To develop my skills in visualization and building dashboards
 - To better my data cleaning and wrangling skills via SQL and python
-- To secure a job in the data analytics job market
+* To secure a job in the data analytics job market
 
 #### PYTHON CODE ARTICLE THAT INTEREST ME
 Below is my favorite article that I love to read 
