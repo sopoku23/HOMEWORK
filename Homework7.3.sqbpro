@@ -1,0 +1,26 @@
+SELECT weekday, round(AVG(chargeTimeHrs),2) as avgChargeTime 
+FROM EVCharging
+Group by weekday
+ORDER by Avg(chargeTimeHrs) DESC
+LIMIT 1;
+
+-- QUESTION 2
+SELECT userId, round(AVG(kwhTotal),2) as totalPower 
+FROM EVCharging
+GROUP BY userId
+ORDER BY totalPower DESC
+LIMIT 15;
+
+-- QUESTION 3
+SELECT df.typeFacility as 'Type of Facility', count(fc.stationId) as 'Number of Stations'
+FROM dimFacility as df
+INNER JOIN factCharge as fc
+ON df.FacilityKey = fc.facilityID
+GROUP BY df.typeFacility
+ORDER BY count(fc.stationId) DESC;
+
+-- QUESTION 5 
+SELECT userId, MIN(chargeTimeHrs) as minTime, MAX(chargeTimeHrs) as maxTime
+FROM EVCharging
+GROUP BY userId
+HAVING chargeTimeHrs > 1

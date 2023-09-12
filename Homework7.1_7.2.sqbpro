@@ -1,0 +1,41 @@
+-- Question 1
+SELECT ModelYear, Make, Model FROM EVRegistry;
+
+-- Question 2
+SELECT DISTINCT ElectricVehicleType FROM EVRegistry;
+
+-- Question 3
+SELECT * FROM EVRegistry
+WHERE ElectricVehicleType = &quot;Battery Electric Vehicle (BEV)&quot;;
+
+-- Question 4
+SELECT DISTINCT Make, Model FROM EVRegistry
+WHERE BaseMSRP &gt; 20000 and BaseMSRP &lt; 35000;
+
+
+--7.2 Questions 
+
+-- Question 1
+SELECT * FROM EVRegistry
+WHERE City IS NULL;
+
+-- Question 2
+SELECT Make, Model, ElectricVehicleType FROM EVRegistry
+WHERE VIN like &quot;%3E1EA1J&quot;;
+
+-- Question 3
+SELECT ModelYear, Make, Model, ElectricVehicleType, ElectricRange FROM EVRegistry
+WHERE Make = &quot;TESLA&quot; or  Make = &quot;CHEVROLET&quot;
+ORDER BY Make, ModelYear DESC;
+
+-- Question 4
+SELECT stationId, COUNT(*) as Uses FROM EVCharging
+GROUP by stationId
+ORDER by Uses DESC
+LIMIT 5;
+
+-- Question 5
+SELECT DISTINCT userId, MIN(chargeTimeHrs) as minHours, MAX(chargeTimeHrs) as maxHours FROM EVCharging
+WHERE chargeTimeHrs &gt; 0.5
+Group by userId
+Order by minHours, maxHours;
