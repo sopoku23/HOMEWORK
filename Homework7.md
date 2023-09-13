@@ -1,24 +1,28 @@
 ##### Q1. Write a query to grab all of the EV records in the EVRegistry table.
 
 SELECT ModelYear, Make, Model
+
 FROM EVRegistry 
 
 ##### Q2. Using the EVRegistry table, Write a query that lists all of the unique types of EV's. your reult set should have one column, ElectricVehicleType.
 
 SELECT DISTINCT ElectricVehicleType 
+
 FROM EVRegistry;
 
 ##### Q3. Using the EVRegistry, Write a query that shows all of the information on Battery Electric Vehicles (BEV) that are in the registry.
 
-SELECT * 
-FROM EVRegistry
+SELECT * FROM EVRegistry
+
 WHERE ElectricVehicleType = "Battery Electric Vehicle (BEV)";
 
 ##### Q4. Using the EVRegistry, wirte a query that returns the Make and Model of all of the EV's that have a BaseMSRP between 20000 and 35000?
 
-SELECT Make, Model
+SELECT Make, Model 
+
 FROM EVRegistry
-WHERE BaseMSRP > 20000 AND BaseMSRP < 35000;
+
+WHERE BaseMSRP > 20000 and BaseMSRP < 35000;
 
 ### 7.2 HW Questions
 
@@ -64,7 +68,7 @@ Group by userId
 
 Having Sum (ChargeTimeHrs) > 0.5
 
-ORDER BY minHours, maxHours;
+ORDER BY  minHours, maxHours;
 
 ### 7.3 Homework Questions
 
@@ -129,3 +133,7 @@ HAVING chargeTimeHrs > 1
 
 ORDER BY 2 DESC, 3 DESC;
 
+
+```python
+
+```
