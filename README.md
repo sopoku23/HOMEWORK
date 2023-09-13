@@ -15,4 +15,4 @@ https://betterprogramming.pub/10-great-articles-on-python-development-6f54dd3843
 
 
 #### WHY THIS IMAGE
-Everyone in this world, at a point in time has either failed or is yet to fail. But what set people apart is what happens after the failure. Some give up and never wabts to continue. Few people decides to do otherwise and push through. It's hard to do it abd tha's why only few people are able to do that. I chose this image because I want to be a part of the few.
+Everyone in this world, at a point in time has either failed or is yet to fail. But what set people apart is what happens after the failure. Some give up and never wants to continue. Few people decides to do otherwise and push through. It's hard to do it and that's why only few people are able to do that. I chose this image because I want to be a part of the few.
