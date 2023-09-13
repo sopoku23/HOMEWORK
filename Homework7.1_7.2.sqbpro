@@ -51,8 +51,8 @@ LIMIT 5;
 
 
 -- Question 5
-SELECT DISTINCT userId, MIN(chargeTimeHrs) as minHours, MAX(chargeTimeHrs) as maxHours 
+SELECT DISTINCT userId, MIN(chargeTimeHrs) as minTime, MAX(chargeTimeHrs) as maxTime
 FROM EVCharging
+WHERE chargeTimeHrs > .5
 Group by userId
-HAVING SUM(ChargeTimeHrs) > 0.5
-Order by minHours, maxHours;
+ORDER BY  minTime, maxTime;

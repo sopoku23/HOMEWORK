@@ -53,11 +53,11 @@ LIMIT 5;
 
 #### Q5. Using EVCharging, For the folks who charged longer than 0.5 hours, show the min and max of the charging time for each user. Your output columns should be userid, minTime, and maxTime. Order this result set by the last two columns respectively.
 
-SELECT DISTINCT userId, MIN(chargeTimeHrs) as minHours, MAX(chargeTimeHrs) as maxHours
+SELECT DISTINCT userId, MIN(chargeTimeHrs) as minTime, MAX(chargeTimeHrs) as maxTime
 FROM EVCharging
+WHERE chargeTimeHrs > .5
 Group by userId
-Having Sum (ChargeTimeHrs) > 0.5
-ORDER BY  minHours, maxHours;
+ORDER BY  minTime, maxTime;
 
 ### 7.3 Homework Questions
 
